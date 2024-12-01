@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>LDAP Results</title>
+</head>
+<body>
+<h1>Results</h1>
+<div th:if="${error}">
+    <p>Error: <span th:text="${error}"></span></p>
+</div>
+<ul th:if="${results}">
+    <li th:each="result : ${results}" th:text="${result}"></li>
+</ul>
+</body>
+</html>
